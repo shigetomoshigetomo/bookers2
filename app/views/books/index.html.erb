@@ -1,2 +1,23 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<p id="notice"></p>
+<div class="container px-5 px-sm-0">
+ <div class="row">
+   <div class="col-md-3">
+     <h2>User info</h2>
+     <%= image_tag current_user.get_profile_image(63,63) %>
+     <table class="table">
+       <tbody>
+         <tr></tr>
+         <tr>
+           <th>name</th>
+           <th><%= current_user.name %></th>
+         </tr>
+         <tr>
+           <th>introduction</th>
+           <th><%= current_user.introduction %></th>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+   <div class="col"></div>
+ </div>
+</div>
