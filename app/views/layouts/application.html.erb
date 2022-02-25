@@ -60,6 +60,9 @@
       </nav>
     </header>
     <main>
+      <% if flash[:success] %>
+        <p class="text-success"><%= flash[:success] %></p>
+      <%end%>
       <%= yield %>
     </main>
     <footer>
