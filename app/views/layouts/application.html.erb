@@ -60,9 +60,10 @@
       </nav>
     </header>
     <main>
-      <% if flash[:success] %>
-        <p class="text-success"><%= flash[:success] %></p>
-      <%end%>
+
+      <% flash.each do |key,value| %>
+       <%= content_tag :div,value,class:"#{key} text-success" %>
+      <% end %>
       <%= yield %>
     </main>
     <footer>
